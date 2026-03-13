@@ -47,7 +47,7 @@ contract Calculator {
         require(number >=0, "Number must be non-negative");
 
         bytes memory data = abi.encodeWithSignature("squareRoot(int256)",number);
-        (bool success, bytes memory returnData) = scientificCalculatorAddress.call(data);
+        (bool success, bytes memory returnData) = Day9_ScientificCalculatorAddress.call(data);
         require(success, "External call failed");
         uint256 result = abi.decode(returnData, (uint256));
         return result;
