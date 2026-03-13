@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./ScientificCalculator.sol";
+import "./Day9_ScientificCalculator.sol";
 
 contract Calculator {
 
     address public owner;
-    address public scientificCalculatorAddress;
+    address public Day9_ScientificCalculatorAddress;
 
     constructor() {
         owner = msg.sender;
@@ -18,8 +18,8 @@ contract Calculator {
 
     }
 
-    function setScientifiCalculator(address newaddress)public onlyOwner {
-        scientificCalculatorAddress = newaddress;
+    function setDay9_ScientificCalculator(address newaddress)public onlyOwner {
+        Day9_ScientificCalculatorAddress = newaddress;
     }
 
     function add(uint256 a, uint256 b) public pure returns(uint256){
